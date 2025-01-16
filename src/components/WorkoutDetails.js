@@ -4,7 +4,7 @@ function WorkoutDetails({ workout }) {
   const { dispatch } = useWorkoutContext();
 
   const handleClick = async () => {
-    const res = await fetch(`${import.meta.env.BACKEND_PORT}/api/workouts/` + workout._id, {
+    const res = await fetch(`${process.env.BACKEND_PORT}/api/workouts/` + workout._id, {
       method: "DELETE",
     });
 
