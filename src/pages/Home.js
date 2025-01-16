@@ -8,7 +8,7 @@ function Home() {
 
   useEffect(() => {
     const getWorkouts = async () => {
-      const res = await fetch(`${process.env.BACKEND_PORT}/api/workouts/`);
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/workouts/`);
       const json = await res.json();
       if (res.ok) {
         dispatch({ type: "SET_WORKOUTS", payload: json });
